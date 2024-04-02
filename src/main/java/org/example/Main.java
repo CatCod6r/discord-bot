@@ -8,6 +8,7 @@ import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import org.example.events.PingEvent;
+import org.example.events.command.CommandEvent;
 
 public class Main {
     public static void main(String[] arguments)throws InterruptedException{
@@ -19,6 +20,6 @@ public class Main {
                .setActivity(Activity.playing("IntelliJ IDEA"))
                .build().awaitReady();
         api.addEventListener(new PingEvent());
-//        api.addEventListener(new CommandEvent());
+        api.addEventListener(new CommandEvent());
     }
 }
