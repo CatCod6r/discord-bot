@@ -14,7 +14,6 @@ public class Main {
         Dotenv dotenv = Dotenv.configure()
                 .filename("env")
                 .load();
-
        JDA api = JDABuilder.createDefault(dotenv.get("BOT_TOKEN"), GatewayIntent.GUILD_MESSAGES, GatewayIntent.MESSAGE_CONTENT, GatewayIntent.GUILD_MEMBERS)
                .setStatus(OnlineStatus.ONLINE)
                .setActivity(Activity.playing("IntelliJ IDEA"))
